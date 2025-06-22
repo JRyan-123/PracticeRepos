@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dark mode</title>
+	<style>
+		.hero{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 90vh;
+			width: 100%;
+		}
+		.hero img{
+			height: 20vh;
+		}
+		.dark-theme{
+			background-color: black;
+		}
+		.icon-dark{
+			 filter: invert(1) brightness(2);
+		}
+	</style>
+</head>
+<body>
+	<div class="hero">
+		<img src="sun.png" id="icon">
+	</div>
+	<script>
+		const icon =  document.getElementById('icon');
+
+		icon.addEventListener('click', function() {
+			document.body.classList.toggle("dark-theme");
+			icon.classList.toggle("icon-dark");
+			if (document.body.classList.contains("dark-theme")) {
+				icon.src = "moon.png";
+			}
+			else{
+				icon.src = "sun.png";
+			}
+			
+		});
+	</script>
+</body>
+</html>
