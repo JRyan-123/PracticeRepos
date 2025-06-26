@@ -11,9 +11,9 @@ function stopwatch(){
 			hours++
 		}
 	}
-	let h = hours < 10 ? "0" + hours : "0";
-	let m = minutes < 10 ? "0" + minutes : "0";
-	let s = seconds < 10 ? "0" + seconds : "0";
+	let h = hours < 10 ? "0" + hours : hours;
+	let m = minutes < 10 ? "0" + minutes : minutes;
+	let s = seconds < 10 ? "0" + seconds : seconds;
 
 	displayTime.innerHTML = h + " : " + m + " : " + s;
 }
