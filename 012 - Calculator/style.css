@@ -24,6 +24,7 @@
 	text-align: right;
 	font-size: 2em;
 	margin-bottom: 20px;
+	overflow-x: auto;
 }
 .buttons{
 	display: grid;
