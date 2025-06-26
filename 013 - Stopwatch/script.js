@@ -1,28 +1,28 @@
-let [seconds , minutes , hours] = [0 , 0 , 0];
+let [milliseconds, seconds , minutes] = [0 , 0 , 0];
 let displayTime	= document.getElementById('display');
 let timer = null;
 function stopwatch(){
-	seconds++;
-	if (seconds == 60) {
-		seconds = 0;
-		minutes++
-		if (minutes == 60) {
-			minutes = 0;
-			hours++
+	milliseconds+=10;
+	if (milliseconds == 1000) {
+		milliseconds = 0;
+		seconds++
+		if (seconds == 60) {
+			seconds = 0;
+			minutes++
 		}
 	}
-	let h = hours < 10 ? "0" + hours : hours;
-	let m = minutes < 10 ? "0" + minutes : minutes;
-	let s = seconds < 10 ? "0" + seconds : seconds;
 
-	displayTime.innerHTML = h + " : " + m + " : " + s;
+	let m = String(minutes).padStart(2, '0');;
+	let s = String(seconds).padStart(2, '0');
+	let ms = String(Math.floor(milliseconds / 10)).padStart(2, '0');
+	displayTime.innerHTML = m + " : " + s + " : " + ms;
 }
 
 function start() {
 	if (timer!== null) {
 		clearInterval(timer);
 	}
-	timer = setInterval(stopwatch, 1000);
+	timer = setInterval(stopwatch, 10);
 	displayTime.style.color = "#0ff3ff";
 }
 function stop() {
@@ -34,7 +34,7 @@ function stop() {
 }
 function reset() {
 	clearInterval(timer);
-	[seconds , minutes , hours] = [0 , 0 , 0];
+	[milliseconds, seconds , minutes] = [0 , 0 , 0];
 	displayTime.innerHTML = "00 : 00 : 00";
 	displayTime.style.color = "white";
 }
