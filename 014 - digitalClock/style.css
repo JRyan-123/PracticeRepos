@@ -27,6 +27,7 @@ position: relative;
 	align-items: center;
 	justify-content: center;
 	backdrop-filter: blur(40px);
+	border-radius: 10px;
 }
 .container::before{
 	content: '';
