@@ -53,7 +53,7 @@ circle{
 	stroke-width: 20px;
 	stroke-dasharray: 472;
 	stroke-dashoffset: 472;
-	animation: progress 2s linear forwards;
+	animation: progress 1s linear forwards;
 }
 @keyframes progress{
 	100%{
