@@ -17,10 +17,11 @@
 	line-height: 0;
 	background: url("imgs/png.png");
 	position: relative;
+	overflow: hidden;
 }
 .img-wrap{
 	position: absolute;
 	top: 0;
 	left: 0;
-
+	overflow: hidden;
 }
