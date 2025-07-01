@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #d1d1d1;
+}
+.img-box{
+	width: 40%;
+	margin: auto;
+	line-height: 0;
+	background: url("imgs/png.png");
+	position: relative;
+}
+.img-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
