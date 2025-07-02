@@ -25,3 +25,19 @@
 	left: 0;
 	overflow: hidden;
 }
+span{
+	width: 1px;
+	height: 100%;
+	cursor: ew-resize;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#arrow{
+	width: 90px;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	margin-left: -45px;
+
+}
