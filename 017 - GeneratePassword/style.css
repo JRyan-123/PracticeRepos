@@ -53,15 +53,17 @@ button{
 	align-items: center;
 	border-radius: 10px;
 	background:  #00c724;
-	color: white;
+	color: #e6e6e6;
 	cursor: pointer;
+	transition: color .5s;
 }
 button img{
 	filter: invert(1) brightness(2);
+	transition: filter .6s;
 }
 button:hover {
 	color: black;
-	border: 1px solid yellow;
+
 }
 button:hover img{
 	 filter: none;
