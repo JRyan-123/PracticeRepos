@@ -31,13 +31,15 @@ h2{
 blockqoute{
 	flex: .8;
 	font-size: 25px;
-	padding: 15px;
+	padding-top: 25px;
 	text-align: center;
 }
 span{
 	flex: .4;
 	width: 100%;
 	text-align: right;
+	padding-right: 30px;
+	padding-bottom: 20px;
 }
 span::before{
 	content: "--- ";
@@ -45,6 +47,7 @@ span::before{
 .btn-row{
 	display: flex;
   	justify-content: flex-end;
+
   	gap: 20px;
 }
 button{
@@ -52,7 +55,15 @@ button{
 	border: none;
 	outline: none;
 	padding: 10px 20px;
-	border-radius: 15px;
+	border-radius: 25px;
 	background: #0044ba;
 	color: white;
+}
+#fb{
+	background: white;
+	color: #0044ba;
+	border: 1px solid #0044ba;
+}
+button:hover{
+	transform: translateY(1px);
 }
