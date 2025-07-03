@@ -21,6 +21,10 @@ btn.addEventListener("click", () => {
 	speechSynthesis.cancel(); //stops ongoing and start new
 	speech.text = txtInput.value;
 	window.speechSynthesis.speak(speech);
-	speech.voice = voices[0];
-
+	
+	//fix where constantly going back to default voice
+ 	const selectedVoice = voices.find(v => v.voiceURI === voiceSelect.value);
+    if (selectedVoice) {
+      speech.voice = selectedVoice;
+    }
 });
