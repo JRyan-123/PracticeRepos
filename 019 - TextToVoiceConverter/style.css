@@ -51,6 +51,12 @@
 	font-size: 16px;
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	appearance: none;
+
+}
+option{
+  color: #333;
 }
 .hero .row button{
 	background: #ff2212;
